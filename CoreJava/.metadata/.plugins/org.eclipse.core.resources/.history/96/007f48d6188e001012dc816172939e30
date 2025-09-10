@@ -1,0 +1,42 @@
+package core.main;
+
+	
+public class obje1 {
+
+	 Private String name;
+	 Private int age;
+	 Private String add;
+	 Private int roll;
+	
+	
+	public void print() {
+		System.out.println("Name is : "+ name);
+		System.out.println("Age is : "+ age);
+		System.out.println("Address is : "+ add);
+		System.out.println("Roll Number is : "+ roll);
+	
+		
+		
+	}
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+
+		
+		obje1 s1 = new obje1();
+		s1.name = "Vatsal Garg";
+		s1.age = 33;
+		s1.add = "Greater Noida";
+		s1.roll = 170;
+		
+		s1.print();
+		
+		
+	
+	}
+
+}

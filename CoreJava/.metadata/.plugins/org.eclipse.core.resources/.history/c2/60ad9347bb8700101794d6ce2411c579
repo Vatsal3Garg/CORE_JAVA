@@ -1,0 +1,145 @@
+
+package core.main;
+/*
+
+public static returnType funcName(list of params)
+{
+		block of code
+	return data/var;
+}
+
+Q1. Factors?
+Q2. Factorial?
+Q3. maximum b/w 4 var?
+Q4. reverse a num?
+Q5. power?
+Q6. palindrome?
+
+
+
+
+*/
+
+
+
+
+public class Func1 {
+
+	public static int maximum(int a, int b) {
+		return (a > b) ? a : b;
+	}
+
+	public static void isPrime(int n) {
+		boolean b = true;
+		for (int i = 2; i < n; i++) {
+			if (n % i == 0) {
+				b = false;
+				break;
+			}
+		}
+		if (b) {
+			System.out.println("Prime");
+		} else {
+			System.out.println("Not Prime");
+		}
+		return;
+	}
+	
+	public static void Facts(int n ) {
+		
+		
+		for (int i = 1; i <= n ; i++) {
+			if(n%i==0) {
+				System.out.print(i + " ,");
+				
+			}
+			
+		}
+		System.out.println(" ");
+		return;
+	}
+	
+	
+	
+	public static void Facto(int n) {
+		int b = 1;
+		int a ;
+		for(int i = 0 ; i < n; i++) {
+			 
+			a = n - i;
+			b = b * a;
+			
+		}
+		System.out.println(b);
+		return;
+	}
+
+	
+	public static void Max4(int a, int b , int c , int d) {
+		if (a > b) {
+			if(a > c && a > d) {
+				System.out.println(a + " is maximum.");
+			}else if(c > d) {
+				System.out.println(c + " is maximum.");
+			}else {
+				System.out.println(d + " is maximum");
+			}
+		}else if(b > c && b > d)
+		{
+			System.out.println(b + " is maximum.");
+			}
+		else if(c > d) {
+			System.out.println(c + " is maximum.");
+		}else {
+			System.out.println(d + " is maximum");
+		}
+		}
+	
+	
+	
+	public static void rev(int n ) {
+		int a = 0;
+		while (n > 0) {
+			a = a * 10 + a % 10;
+			n = n / 10;
+			
+		}
+		System.out.println(a);
+	}
+	
+	
+	public static void main(String[] args) {
+
+		int n = 13, n2 = 333, n3 = 77;
+		isPrime(n);
+		isPrime(n2);
+		isPrime(n3);
+		isPrime(43);
+		isPrime(433);
+		isPrime(56);
+		isPrime(221);
+		isPrime(91);
+		Facts(n);
+		Facts(n);
+		Facts(n2);
+		Facts(n3);
+		Facts(43);
+		Facts(433);
+		Facts(56);
+		Facts(221);
+		Facts(91);
+		Facto(n);
+	    Facto(4);
+		Facto(5);
+		Facto(6);
+		Facto(7);
+		Facto(8);
+		rev(6543);
+		Max4(23, 45,456,786);
+		Max4(455,543,345,346);
+		int m = maximum(n2, n3);
+		
+		System.out.println(m);
+		System.out.println(maximum(3333, m));
+	}
+}

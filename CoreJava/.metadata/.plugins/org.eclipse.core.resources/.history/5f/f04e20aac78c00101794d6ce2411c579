@@ -1,0 +1,26 @@
+package core.main;
+
+import java.util.Scanner;
+
+public class pra1 {
+
+	public static void main(String[] args) {
+//		int[] arr = new int[5];
+//		System.out.println(arr[2]);
+//		command + /
+//		String[] s = new String[4];
+//		System.out.println(s[2]);
+		Scanner sc = new Scanner (System.in);
+		
+		
+		int [] [] arr = new int [3][3];
+		
+		
+		System.out.println(arr [2][2]);
+		
+		
+		
+
+	}
+
+}
