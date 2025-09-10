@@ -1,0 +1,6 @@
+ *{margin: 0px; padding: 0px;}
+ .mainbody{height: 1000px; width: 100%; background: yellowgreen;}
+ .header{height:150px; width: 100%; background: grey;}
+ .nav{height: 50px; width: 100%; background: orange;}
+ .center{height: 700px; width: 100%; background: lightblue;}
+ .footer{height: 100px; width: 100%; background: black;}

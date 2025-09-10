@@ -1,0 +1,27 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* ::selection{background: purple; color: white;} */
+/* p::selection{background: purple; color: white;} */
+/* h2::before{
+    content: "hello users ";
+}
+h2::after{content: " welcome to ducat";} */
+
+h2::after{
+    content: url('pic3.jpg');
+}
+h2::before{content: url('pic3.jpg');}
+[type="text"]::placeholder{color: red;}
+    </style>
+</head>
+<body>
+    <input type="text" name="n" placeholder="enter name">
+    <h2>Lorem ipsum dolor sit amet.</h2>
+    <h4>Lorem ipsum dolor sit amet consectetur.</h4>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore quam maxime explicabo odit, quae necessitatibus corrupti. Voluptates voluptatum ipsa culpa minima laboriosam ex quas adipisci sed? Rem reiciendis natus, nulla id dolor aut atque possimus.</p>
+</body>
+</html>
