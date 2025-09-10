@@ -1,0 +1,35 @@
+package core.main;
+
+import java.util.Scanner;
+
+public class LinearSearch1 {
+	
+	public static void linSearch(int[] abc , int n ) {
+		for(int i = 0; i < abc.length ; i++) {
+			if(abc[i] == n) {
+				System.out.println("Yes it exists at index : " + i);
+				break;
+			}
+			
+		}
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[8];
+		for(int a : arr) {
+			arr[a] = sc.nextInt();
+		}
+		System.out.println("Enter the number you want to find in the array : ");
+		int b = sc.nextInt();
+		
+		linSearch(arr , b);
+		
+		
+		
+		
+	
+	}
+
+}

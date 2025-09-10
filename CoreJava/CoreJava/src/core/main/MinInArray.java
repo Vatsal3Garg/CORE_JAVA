@@ -1,0 +1,31 @@
+package core.main;
+
+public class MinInArray {
+
+	
+	
+	public static int MinInArr(int[] arr , int start , int end ) {
+		int min = arr[start];
+		if (arr.length == 0) {
+			return -1;
+		}
+		for (int i = start + 1 ; i < end; i++) {
+			if (min > arr[i]) {
+				min = arr[i];
+				
+			}
+			
+		}
+		return min;
+	}
+	public static void main(String[] args) {
+		
+     int[] arr = {12, 34, 54, 23, 11, 98, 76, 3, 2, 1, 56};
+     int a = 0 ;
+     int b = 11;
+     int c = MinInArr(arr, a , b);
+     System.out.println(c);
+     
+	}
+
+}

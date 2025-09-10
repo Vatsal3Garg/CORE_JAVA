@@ -1,0 +1,33 @@
+package core.main;
+
+public class EvenDigits {
+	public static int findNumbers(int[] nums) {
+		 int fin = 0;
+		 int count = 0;
+        for (int i = 0; i < nums.length;i++){
+            int a = nums[i];
+            
+           
+            int b = -1;
+            while ( b != 0){
+                b = a % 10 ;
+                count++;
+                a = a/10;
+                
+            }
+             if (count % 2 == 0){
+                fin++;
+                
+            
+             }
+        }
+        return fin;
+    }
+	public static void main(String[] args) {
+		int[] arr = {12,134, 345,2,6,7896};
+		System.out.println(findNumbers(arr));
+
+
+	}
+
+}

@@ -1,0 +1,27 @@
+package core.main;
+
+import java.util.Scanner;
+
+public class LinearSearch1 {
+	
+	public static void linSearch(int[] arr , int n ) {
+		
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int[] arr = new int[8];
+		arr[0] = sc.nextInt();
+		arr[1] = sc.nextInt();
+		arr[2] = sc.nextInt();
+		arr[3] = sc.nextInt();
+		arr[4] = sc.nextInt();
+		arr[5] = sc.nextInt();
+		arr[6] = sc.nextInt();
+		arr[7] = sc.nextInt();
+		
+		
+	
+	}
+
+}

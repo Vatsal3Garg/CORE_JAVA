@@ -1,0 +1,31 @@
+package core.main;
+
+public class EvenDigits {
+	public int findNumbers(int[] nums) {
+		 int fin = 0;
+		 int count = 0;
+        for (int i = 0; i < nums.length;i++){
+            int a = nums[i];
+            
+           
+            int b = Integer.MIN_VALUE;
+            while ( b != 0){
+                b = a % 10 ;
+                count++;
+                a = a/10;
+                
+            }
+             if (count % 2 == 0){
+                fin++;
+                return fin;
+            
+             }
+        }
+        return fin;
+    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
