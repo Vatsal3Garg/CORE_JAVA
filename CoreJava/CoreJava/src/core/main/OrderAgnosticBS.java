@@ -1,0 +1,86 @@
+package core.main;
+
+import java.util.Scanner;
+
+public class OrderAgnosticBS {
+	
+	public static int binarysearch(int[] arr , int target ) {
+		
+		int start = 0 ;
+		int end = arr.length-1;
+		// order-agnostic binary search 
+		// when array is in ascending order
+		if (arr[0] < arr [end]) {
+			while(start<=end ) {
+				int m = start + (end-start)/2;
+				
+				if (target > arr[m] ) {
+					start = m+1;// taking right array half 
+				
+					
+				}else if(target < arr[m] ){
+					end = m-1;// taking left array half 
+					
+				}else if(target == arr[m]) {
+					return m;
+					
+				}
+				
+				
+				
+			}
+			
+			
+		}
+		
+		// when array is in descending order
+		else if(arr[0] > arr[end]){
+			
+			
+			
+			while(start<=end ) {
+				int m = start + (end-start)/2;
+				
+				if (target > arr[m] ) {
+				  end = m-1;// taking left array half 
+				
+					
+				}else if(target < arr[m] ){
+					start = m + 1;// taking right array half 
+					
+				}else if(target == arr[m]) {
+					return m;
+					
+				}
+				
+				
+				
+			}
+			
+		}
+		
+	return -1;
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner (System.in);
+		System.out.println("enter a size of array: ");
+		int size = sc.nextInt();
+		int[] ar = new int[size];
+		System.out.println("give a sorted array : ");
+	
+		for(int i = 0; i<ar.length ;i++) {
+			ar[i]= sc.nextInt();
+		}
+		System.out.println("give a target element : ");
+		int tar = sc.nextInt();
+		
+		int ans = binarysearch(ar,tar);
+		System.out.println("Index of Target Element is : "+ ans);
+		
+	}
+
+}
