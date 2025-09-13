@@ -1,0 +1,45 @@
+package core.main;
+
+public class Floor {
+	
+	public static int binarysearch(int[] arr , int target ) {
+		
+		int start = 0 ;
+		int end = arr.length-1;
+		
+		// floor of a number => greatest number in a array  <= target
+		
+		while(start<=end ) {
+			int m = start + (end-start)/2;
+			
+			if (target > arr[m] ) {
+				start = m+1; // taking array right half
+			
+				
+			}else if(target < arr[m] ){
+				end = m-1;// taking array left half
+				
+			}else if(target == arr[m]) {
+				return m;
+				
+			}
+			
+			
+			
+		}
+		
+	return end;
+		
+		
+		
+	}
+
+	public static void main(String[] args) {
+		int[] ar = {2, 3, 5 , 9 ,14, 16 , 18};
+		int tar = 15;
+		int ans = binarysearch(ar,tar);
+		System.out.println(ans);
+		
+	}
+
+}
