@@ -1,0 +1,146 @@
+package core.main;
+
+    class per{
+    	
+    	
+	 private String name;
+     private int age;
+	 private String add;
+	 private int num;
+	 private int sal;
+	 
+	 // getters and setters
+	 public String getName() {
+			return name;
+		}
+		 public void setName(String name) {
+			 this.name = name;
+		 }
+		 public int getAge() {
+			 return age;
+		 }
+		 public void setAge(int age) {
+			 this.age = age;
+		 }
+		 public String getAdd() {
+			 return add;
+		 }
+		 public void setAdd(String add) {
+			 this.add = add;
+		 }
+		 public int getNum() {
+			 return num;
+		 }
+		 public void setNum(int num) {
+			 this.num = num;
+		 }
+		 public int getSal() {
+			 return sal;
+		 }
+		 public void setSal(int sal) {
+			 this.sal = sal;
+		 }
+	
+	public void print() {
+		System.out.println("Name is : " + name);
+		System.out.println("Age is : " + age);
+		System.out.println("Address is : " + add);
+		System.out.println("Phn Number is : " + num);
+		System.out.println("Salary is : " + sal);
+	}
+	 public void setter(String name, int age, String add, int num,  int sal) {
+		 
+		 this.name = name;
+		 this.age = age;
+		 this.add = add;
+		 this.num = num;
+		 this.sal = sal;
+		 
+		 
+	 }
+	
+	 
+	
+	
+	
+}
+
+
+
+
+
+
+public class GettAndSett {
+
+	public static void main(String[] args) {
+		
+		
+		per vikas = new per();
+		vikas.setter("Vikash kumar", 67, "Gurgao", 678, 10000);
+		vikas.print();
+		
+		System.out.println();
+		vikas.setSal(989090);
+		System.out.println("Updated salary of Vikas is "+ vikas.getSal());
+		System.out.println();
+		vikas.print();
+		System.out.println("-----------------");
+		
+		
+		per onu = new per();
+	    onu.setter("Onu Kumar", 67, "Gurgao", 678, 10000);
+		onu.print();
+		
+		System.out.println();
+		onu.setAge(98);
+		System.out.println("Updated salary of Onu is "+ onu.getAge());
+		System.out.println();
+		onu.print();
+		System.out.println("-----------------");
+		
+		
+		per vatsal = new per();
+		vatsal.setter("Vikash kumar", 67, "Gurgao", 678, 10000);
+		vatsal.print();
+		
+		System.out.println();
+		vatsal.setName("GUpta");
+		System.out.println("Updated salary of vatsal is "+ vatsal.getName());
+		vatsal.print();
+		System.out.println("-----------------");
+		
+		System.out.println("-----------------");
+		
+		
+		
+		per vanshika = new per();
+		vanshika.setter("Vikash kumar", 67, "Gurgao", 678, 10000);
+		vanshika.print();
+		
+		System.out.println();
+		vanshika.setSal(1000000);
+		System.out.println("Updated salary of vanshika is "+ vanshika.getSal());
+		vanshika.print();
+		System.out.println("-----------------");
+		
+		System.out.println("-----------------");
+		
+		
+		per monika = new per();
+		monika.setter("Vikash kumar", 67, "Gurgao", 678, 10000);
+		monika.print();
+		
+		System.out.println();
+		monika.setAdd("Heart");
+		System.out.println("Updated salary of monika is "+ monika.getAdd());
+		monika.print();
+		System.out.println("-----------------");
+		
+		System.out.println("-----------------");
+		
+		
+		
+		
+	}
+
+}
