@@ -1,0 +1,31 @@
+package core.main;
+
+
+class ConsOverLoading {
+
+	private int id, salary;
+	private String name, gender;
+	
+	
+	public ConsOverLoading() {
+		System.out.println("Default.Default()");
+	}
+	
+
+
+}
+
+
+
+public class ConstructorChainingandOverloading {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		
+
+	}
+
+}

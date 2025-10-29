@@ -1,0 +1,68 @@
+package core.main;
+
+
+
+//https://www.geeksforgeeks.org/dsa/find-position-element-sorted-array-infinite-numbers/
+public class SearchInInfiniteArray {
+
+	
+	
+	
+     static int ans(int[] arr, int target ) {	
+    	 
+    	 
+    	 int start = 0;
+    	 int end = 1;
+    	 
+    	 while(target > arr[end]) {
+    		 
+    		 
+    		 int temp = end + 1;
+    		 
+    		 
+    		 end = end + (end - start + 1)*2;
+    		 start = temp;
+    	 }
+    	 
+    	 
+    	 int a = BinarySea(arr , target , start , end);
+    	 
+    	 
+    	 return a;
+		
+	}
+     
+     
+     static int BinarySea(int [] arr , int target , int s, int e) {
+    	 
+    	
+    	 
+    	 
+    	 while(s <= e) {
+    		 
+    		 int m = s + (e-s)/2;
+    		 if(target > arr[m]) {
+    			 s = m +1 ;
+    			 
+    		 }else if(s >= e) {
+    			 e = m -1;
+    			 
+    		 }else if(target == arr[m]) {
+    			 return m;
+    		 }
+    	 }
+    	 
+    	 return -1;
+    	 
+    	 
+     }
+	public static void main(String[] args) {
+		
+		int [] ar = {2,3,4,5,6,7,8,10,12,14,15,23,30,36,42};
+		
+		int tar = 15;
+		
+System.out.println(ans(ar,tar));
+	}
+
+}

@@ -1,0 +1,115 @@
+package core.main;
+
+
+
+
+class Car{
+	String name;
+	String version;
+	
+	public void run() {
+		System.out.println("run.run()");
+	}
+	
+    public void brek() {
+		System.out.println("brek.brek()");
+	}
+	
+    Car(String name , String version){
+    	this.name = name;
+    	this.version = version;
+    	System.out.println("Car.constructor");
+    }
+	
+}
+
+
+class Suv extends Car{
+	String model;
+	Suv(String name ,String version, String model ){
+		super(name,version);
+		this.model = model;
+		System.out.println("Suv.constructor");
+	}
+	public void offroad() {
+		System.out.println("offroad.offroad()");
+	}
+
+	
+}
+
+
+
+class creta extends Suv{
+	int date;
+	creta(String name ,String version, String model ,int date ){
+	super( name , version, model);
+	this.date = date;
+	System.out.println("Creta.constructor");
+	
+	}
+	public  void Print() {
+		System.out.println(name);
+		System.out.println(version);
+		System.out.println(model);
+		System.out.println(date);
+		
+
+	}
+}
+
+class Sedan extends Car{
+	String mode;
+	Sedan(String name ,String version, String mode ){
+		super(name,version);
+		this.mode = mode;
+		System.out.println("sedan.constructor");
+	}
+	public void Race() {
+		System.out.println("Race.Race()");
+	}
+
+	
+}
+class verna extends Sedan {
+	int quant;
+	verna(String name ,String version, String mode ,int quant ){
+	super( name , version, mode);
+	this.quant = quant;
+	System.out.println("verna.constructor");
+	}
+	public void Prin() {
+		System.out.println(name);
+		System.out.println(version);
+		System.out.println(mode);
+		System.out.println(quant);
+		
+
+	}
+}
+public class prac1 {
+
+	
+	
+	
+	
+	
+	public static void main(String[] args) {
+		
+    verna v = new verna("verna1", "ver1" , "S+" , 2);
+    v.Prin();
+    verna v2 = new verna("verna1", "ver2" , "S" , 2);
+    v2.Prin();
+    verna v3 = new verna("verna1", "ver3" , "gold" , 2);
+    v3.Prin();
+    System.out.println("-----------------------------");
+    
+    creta c = new creta ("creta1", "ver2.0", "pure+" , 3);
+    c.Print();
+    creta c2 = new creta ("creta1", "ver1.0", "pure" , 3);
+    c2.Print();
+    creta c3 = new creta ("creta1", "ver3.0", "dark+" , 3);
+    c3.Print();
+	}
+
+}

@@ -8,6 +8,10 @@ package core.main;
 
 
 public class PeakIndexInMountainArray {
+	
+	// Linear Search
+	
+	
 	public static int findPeakElement(int[] arr) {
         for(int i = 0 ; i< arr.length;i++){
 
@@ -21,9 +25,37 @@ public class PeakIndexInMountainArray {
     return -1;
     }
 
+	
+	
+	
+	
+	// Binary Search 
+	
+	
+	static int findPeak(int[] arr) {
+		
+		int s = 0;
+		int e = arr.length - 1;
+		
+		while (s <= e) {
+			
+			int m =  s + (e - s)/2;
+			if(arr[m] < arr[m + 1]) {
+				s = m + 1;
+			}
+			else if(arr[m] < arr[m - 1]) {
+				e = m - 1;
+			}
+				else {
+				return m;
+			}
+	
+		}
+		return -1;
+	}
 	public static void main(String[] args) {
-		int[] ar = {0,1,2,4,7,6,0,1,3};
-		System.out.println(findPeakElement(ar));
+		int[] ar = {0,1,2,3,4,5,6,3,2};
+		System.out.println(findPeak(ar));
 
 	}
 

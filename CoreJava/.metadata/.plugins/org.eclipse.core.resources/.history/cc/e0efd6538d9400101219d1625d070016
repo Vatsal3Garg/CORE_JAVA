@@ -1,0 +1,29 @@
+package core.main;
+
+public class PosInInfiniteArray {
+	
+	
+	
+	public static int CountSize(int[] arr) {
+		
+		int c = -1;
+		for (int a : arr) {
+			c++;
+		}
+		
+		
+		
+		
+		
+		return c;
+		
+	}
+
+	public static void main(String[] args) {
+		int[] ar = {1,4,5,3,6,3,5,34,5,4,5};
+		
+		System.out.println(CountSize(ar));
+
+	}
+
+}

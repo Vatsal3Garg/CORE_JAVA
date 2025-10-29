@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;core.main.Car&apos; to &apos;Carr&apos;&#x0A;- Original project: &apos;CoreJava&apos;&#x0A;- Original element: &apos;core.main.Car&apos;&#x0A;- Renamed element: &apos;core.main.Carr&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Car&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;core.main{Abstraction.java[Car" matchStrategy="1" name="Carr" qualified="false" references="true" similarDeclarations="false" stamp="1761675775751" textual="false" version="1.0"/>
+</session>

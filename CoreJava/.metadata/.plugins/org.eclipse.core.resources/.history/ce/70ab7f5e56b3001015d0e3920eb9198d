@@ -1,0 +1,53 @@
+package core.main;
+
+
+
+class ConsOverLoading {
+
+	private int id, salary;
+	private String name, gender;
+	
+	
+	public ConsOverLoading() {
+		System.out.println("Default.Default()");
+	}
+
+
+	public ConsOverLoading(String name) {
+		this();
+		this.name = name;
+		System.out.println("Constructor.Constructor(1)");
+	}
+
+
+	public ConsOverLoading(String name, String gender) {
+		this(name);
+		this.gender = gender;
+		System.out.println("Constructor.Constructor(2)");
+	}
+	
+    public void printt() {
+    	System.out.println("name is : "+ name);
+    	System.out.println("gender is : "+ gender);
+    	System.out.println("id is : "+ id);
+    	System.out.println("salary is : "+ salary);
+    }
+
+}
+
+
+
+public class ConstructorChainingandOverloading {
+
+	public static void main(String[] args) {
+		
+		
+		
+		
+		ConsOverLoading c1 = new ConsOverLoading("vatsal");
+		c1.printt();
+		ConsOverLoading c2 = new ConsOverLoading("vatsal", "male");
+        c2.printt();
+	}
+
+}

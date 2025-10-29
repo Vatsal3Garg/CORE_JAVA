@@ -2,51 +2,80 @@ package core.main;
 
 import java.util.Arrays;
 
-public class FirstAndLastIndex {
+public  class FirstAndLastIndex {
 	
 	
 	//https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/
-
 	
-	public static int[] FirstandLast(int[] arr , int target)
-	{
-		int e = 0;
-		int s = 0;
-		for(int i = 0; i<=arr.length; i++) {
-			
-			if(target == arr[i]) {
-				s = i;
+	public static int FirstOccurence(int[] arr , int target ) {
+		
+		int start = 0 ;
+		int end = arr.length-1;
+		int res1 = -1;
+		
+		while (start <= end) {
+			int mid = start + (end - start)/2;
+			if(target == arr[mid]) {
 				
-				if(i != arr.length - 1) {
-					if (arr[i + 1]== target ) {
-						e = i + 1;
-						i++;
-						
-					}else {
-						s = e;
-										}
-				}
+				res1 = mid;
+				end = mid - 1;
 				
-			}else if(target < arr[i]){
-				break;
-         }else{
-            s = -1 ;
-            e = -1;
-			
-		}
+			}
+			else if(target > arr[mid]) {
+				start = mid + 1;
+				
+			}else if (target < arr[mid]) {
+				end = mid - 1;
+			}
 		}
 		
-		int[] a = {s , e};
-		return a;
+	return res1;
 		
 		
 		
 	}
+	
+	public static int LastOccurence(int[] arr , int target ) {
+		
+		int start = 0 ;
+		int end = arr.length-1;
+		int res2 = -1;
+		
+		while (start <= end) {
+			int mid = start + (end - start)/2;
+			if(target == arr[mid]) {
+				
+				res2 = mid;
+				start = mid + 1;
+				
+			}
+			else if(target > arr[mid]) {
+				start = mid + 1;
+				
+			}else if (target < arr[mid]) {
+				end = mid - 1;
+			}
+		}
+		
+	return res2;
+		
+		
+		
+	}
+	
+	
+	public static int[] Solution (int[] arr , int target ) {
+		
+		int a = FirstOccurence( arr ,  target );
+		int b = LastOccurence( arr ,  target );
+		return new  int[]{a,b};
+	}
+	
 	public static void main(String[] args) {
-		int[] ar = {5, 7, 7, 8 , 8, 10};
-		int tar = 8;
-	    String sc = Arrays.toString(FirstandLast(ar , tar));
-		System.out.println(sc);
+		int[] ar = {5, 7, 7, 8 , 8, 8,10,10,12};
+		int tar = 10;
+	    
+		System.out.println(Arrays.toString(Solution ( ar, tar )));
 		
 
 	}

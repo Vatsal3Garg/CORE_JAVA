@@ -1,0 +1,77 @@
+package core.main;
+
+
+class  Animal{
+	
+	private String name;
+	private String breed;
+	
+	Animal(){
+		System.out.println("Animal().Animal()");
+	}
+	
+	
+	
+	
+	public Animal(String name, String breed) {
+		this.name = name;
+		
+		this.breed = breed;
+	}
+	
+	
+	
+	public void run() {
+		System.out.println( name + " is Running....");
+	}
+	
+    public void walk() {
+    	System.out.println("Walking....");
+	}
+	
+    public void nodd() {
+    	System.out.println("Nodding....");
+		
+	}
+	
+}
+
+
+class Dog extends Animal{
+	
+	private int Age;
+	 
+	
+    Dog(String name, String breed , int Age){
+    	
+		super(name,breed);
+		this.Age = Age;
+    	
+    	
+	}
+    
+	public void Barking() {
+		System.out.println("Dog is Barking..........");
+	}
+	
+}
+
+
+
+
+public class Inheritance_Constructor {
+
+	public static void main(String[] args) {
+		
+		
+		Dog d = new Dog("Bozo", "Labra", 23);
+		 
+        d.run();
+		d.walk();
+		d.nodd();
+		d.Barking();
+		
+
+	}
+
+}
